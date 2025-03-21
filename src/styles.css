@@ -169,6 +169,7 @@ main {
           background-color: var(--color-primary);
           width: 10px;
           height: 10px;
+          border-radius: 10px;
           border: none;
           box-shadow: 0 0 1px white;
           transition: box-shadow 0.3s ease-in-out;
@@ -180,6 +181,7 @@ main {
           background-color: var(--color-primary);
           width: 10px;
           height: 10px;
+          border-radius: 10px;
           border: none;
           box-shadow: 0 0 1px white;
           transition: box-shadow 0.3s ease-in-out;
@@ -191,6 +193,7 @@ main {
           background-color: var(--color-primary);
           width: 10px;
           height: 10px;
+          border-radius: 10px;
           border: none;
           -webkit-appearance: none;
           box-shadow: 0 0 1px white;
