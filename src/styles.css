@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: hsl(243, 100%, 93%);
+  --color-secondary: hsl(229, 7%, 55%);
+  --background-color: hsl(229, 57%, 11%);
+  --accent-color: hsl(223, 63%, 15%);
+  --card-color: hsl(228, 56%, 26%);
+  --icon-color: hsl(228, 55%, 62%);
+  --color-bar-primary: hsl(6, 100%, 80%);
+  --color-bar-secondary: hsl(335, 100%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  background-image: url(./images/bg-desktop.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-width: 375px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 800px;
+  padding: 25px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  @media(max-width:800px) {
+    background-image: url(./images/bg-mobile.png);
+    background-position: center center;
+    background-size: cover;
+    min-height: 667px;
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  transform: translateY(-10px);
+
+  header {
+    background-color: var(--card-color);
+    max-width: 350px;
+    min-width: 326px;
+    width: 100%;
+    border-radius: 10px 100px 10px 10px;
+    height: 200px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 50px 2px;
+
+    .logo {
+      width: 135px;
+      height: 40px;
+      fill: var(--color-primary);
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        fill: var(--color-bar-secondary);
+      }
+
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: 15px;
+
+        li {
+          list-style: none;
+          border-radius: 8px;
+          background-color: var(--background-color);
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+
+          .icon {
+            width: 48px;
+            height: 48px;
+            padding: 12px;
+            fill: var(--icon-color);
+            transition: all .3s ease-in-out;
+          }
+
+          &:hover {
+            background-color: var(--accent-color);
+
+            .icon {
+              fill: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    position: relative;
+    max-width: 540px;
+    min-width: 326px;
+    width: 100%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    height: 154px;
+    margin-top: auto;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 50px 2px;
+
+    .info {
+      font-size: 1.4rem;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .bar {
+      width: 100%;
+      height: 18px;
+      border-radius: 50px;
+      background-color: var(--background-color);
+      padding: 3px;
+      margin: 14px 0 10px 0;
+      position: relative;
+      display: flex;
+
+      .used {
+        max-width: 100%;
+        width: 81.5%;
+        height: 100%;
+        border-radius: 50px;
+        background: linear-gradient(to right, var(--color-bar-primary), var(--color-bar-secondary));
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 100%;
+        height: 100%;
+        -webkit-appearance: none;
+        background: transparent;
+        appearance: none;
+        cursor: pointer;
+
+
+        &::-moz-range-thumb {
+          transform: translateX(-10px);
+          width: 10px;
+          height: 10px;
+          border: none;
+          box-shadow: 0 0 1px white;
+          transition: box-shadow 0.3s ease-in-out;
+          animation: glow 1s infinite alternate-reverse;
+        }
+
+        &::-ms-thumb {
+          transform: translateX(-10px);
+          width: 10px;
+          height: 10px;
+          border: none;
+          box-shadow: 0 0 1px white;
+          transition: box-shadow 0.3s ease-in-out;
+          animation: glow 1s infinite alternate-reverse;
+        }
+
+        &::-webkit-slider-thumb {
+          transform: translateX(-10px);
+          width: 10px;
+          height: 10px;
+          border: none;
+          -webkit-appearance: none;
+          box-shadow: 0 0 1px white;
+          transition: box-shadow 0.3s ease-in-out;
+          animation: glow 1s infinite alternate-reverse;
+        }
+      }
+    }
+
+    .capacity {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .popup {
+      position: absolute;
+      right: 40px;
+      top: -48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 72px;
+      border-radius: 12px;
+      border-right: 0;
+      background: var(--color-primary);
+      border-bottom-right-radius: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+
+      .avaliable {
+        margin-right: 10px;
+        font-size: 4rem;
+        color: var(--background-color);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -38px;
+        right: 0;
+        border-top: 22px solid var(--color-primary);
+        border-left: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+      }
+    }
+
+  }
+
+  @media(max-width:800px) {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    header {
+      max-width: 100%;
+    }
+
+    section {
+      max-width: 100%;
+      height: 160px;
+
+      .popup {
+        border-radius: 12px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.5);
+  }
+}

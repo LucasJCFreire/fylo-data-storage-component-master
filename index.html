@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./src/styles.css">
+  <title>Fylo data storage component master</title>
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <svg class="logo">
+        <use href="./src/images/symbols.svg#logo"></use>
+      </svg>
+      <nav>
+        <ul>
+          <li> <svg class="icon">
+              <use href="./src/images/symbols.svg#icon-document"></use>
+            </svg></li>
+          <li>
+            <svg class="icon">
+              <use href="./src/images/symbols.svg#icon-folder"></use>
+            </svg>
+          </li>
+          <li>
+            <svg class="icon">
+              <use href="./src/images/symbols.svg#icon-upload"></use>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section>
+      <p class="info">You've used <span>815 GB</span> of your storage</p>
+
+      <div class="bar">
+        <div class="used"></div>
+        <input type="range" id="rangeInput" name="value" min="0" max="1000" step="5" value="815">
+      </div>
+
+      <div class="capacity">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+
+      <div class="popup">
+        <span class="avaliable">185</span> GB left
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="./src/scripts.js"></script>
+
+</body>
+
+</html>
