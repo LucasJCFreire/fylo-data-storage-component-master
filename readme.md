@@ -7,7 +7,7 @@
       <img src="./src/images/preview.webp" />
       <p>Click to access deploy!</p>
     </a>
-    <a href="#">
+    <a href="https://www.frontendmentor.io/solutions/css-variables-symbols-svg-and-a-touch-of-magic-and-coffee-ROsUx79sbp">
       <p>Click here to check the evaluation on the Frontend Mentor</p>
     </a>
     </th>
